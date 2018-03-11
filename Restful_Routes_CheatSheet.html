@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restful Routes</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style type="text/css">
+		.page-layout{
+			height:100vh;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container page-layout">
+		<h1>RESTful Routes</h1>
+		<h3>A table of all 7 RESTful routes</h3>
+		<br><br><br>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>Path</th>
+					<th>HTTP Verb</th>
+					<th>Purpose</th>
+					<th>Mongoose Method</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Index</td>
+					<td>/dogs</td>
+					<td>GET</td>
+					<td>List all dogs</td>
+					<td>Dog.find()</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>New</td>
+					<td>/dogs/new</td>
+					<td>GET</td>
+					<td>Show new dog form</td>
+					<td>N/A</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Create</td>
+					<td>/dogs</td>
+					<td>POST</td>
+					<td>Create a new dog, then redirect somewhere</td>
+					<td>Dog.create()</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Show</td>
+					<td>/dogs/:id</td>
+					<td>GET</td>
+					<td>Show info about one specific dog</td>
+					<td>Dog.findById()</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Edit</td>
+					<td>/dogs/:id/edit</td>
+					<td>GET</td>
+					<td>Show edit form for one dog</td>
+					<td>Dog.findById()</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>Update</td>
+					<td>/dogs/:id</td>
+					<td>PUT</td>
+					<td>Update particular dog, then redirect somewhere</td>
+					<td>Dog.findByIdAndUpdate()</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>Destroy</td>
+					<td>/dogs/:id</td>
+					<td>DELETE</td>
+					<td>Delete a particular dog, then redirect somewhere</td>
+					<td>Dog.findByIdAndRemove()</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
