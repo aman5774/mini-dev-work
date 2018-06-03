@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Loading Demo</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(window).on("load", function() {
+      $('#loading').fadeOut(5000); //remove this time(5000) or reduce it to show DOM as and when it is loaded
+    });
+  </script>
+  <style media="screen">
+    #loading {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background: url('load-image.gif') 50% 50% no-repeat rgba(250, 250, 250, 1.0);
+    }
+
+    #content {
+      max-width: 50%;
+      margin: auto;
+      padding: 20% 0;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loading"></div>
+  <div id="content">
+    <h1>Page Loader Example</h1>
+  </div>
+</body>
+
+</html>
